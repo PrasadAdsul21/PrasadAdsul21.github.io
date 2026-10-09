@@ -12,6 +12,7 @@ export const PERSONAL = {
   github: "https://github.com/PrasadAdsul21",
   linkedin: "https://in.linkedin.com/in/prasadadsul217812",
   cv: "/Prasad_Adsul_DotNet-AI_Engineer_CV.pdf",
+  avatar: "/profile.jpeg",
   education: {
     degree: "M.S. in Computer Science",
     institution: "Savitribai Phule Pune University",
@@ -91,6 +92,8 @@ export const PROJECTS = [
     githubUrl: null,
     demoUrl: null,
     featured: true,
+    coverImage: "/OMedicalVisa_Img1.jpg",
+    images: ["/OMedicalVisa_Img1.jpg", "/OMedicalVisa_Img2.jpg", "/OMedicalVisa_Img3.jpg"],
     tags: ["Healthcare", "Enterprise", "Backend", ".NET", "API"],
   },
   {
@@ -156,6 +159,8 @@ export const PROJECTS = [
     githubUrl: null,
     demoUrl: null,
     featured: true,
+    coverImage: "/TaskTrackingPOC_Img1.jpg",
+    images: ["/TaskTrackingPOC_Img1.jpg", "/TaskTrackingPOC_Img2.jpg"],
     tags: ["Knowledge Graph", "AI/GenAI", "Neo4j", "Python", "Graph Database"],
   },
   {
@@ -226,6 +231,8 @@ export const PROJECTS = [
     githubUrl: null,
     demoUrl: null,
     featured: true,
+    coverImage: "/AgentSupportBot_Img1.jpg",
+    images: ["/AgentSupportBot_Img1.jpg", "/AgentSupportBot_Img2.jpg"],
     tags: ["LLM", "RAG", "Python", "FastAPI", "AI/GenAI"],
   },
   {
@@ -292,6 +299,8 @@ export const PROJECTS = [
     githubUrl: null,
     demoUrl: null,
     featured: true,
+    coverImage: "/DocumentOCR-AI_Img1.jpg",
+    images: ["/DocumentOCR-AI_Img1.jpg", "/DocumentOCR-AI_Img2.png"],
     tags: ["OCR", "NLP", "Python", "AI/GenAI", "Document Processing"],
   },
   {
