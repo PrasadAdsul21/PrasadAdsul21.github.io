@@ -53,16 +53,37 @@ export default function AboutSection() {
 
           {/* Right: Info cards */}
           <div className="space-y-4">
-            {/* Profile card */}
+            {/* Profile card with Avatar */}
             <div className="card-glass p-6">
-              <h3 className="text-sm font-semibold text-slate-300 mb-4 uppercase tracking-wider">
-                Profile
-              </h3>
+              {"avatar" in PERSONAL && PERSONAL.avatar && (
+                <div className="flex items-center gap-4 mb-5 pb-5 border-b border-white/[0.06]">
+                  <div className="relative flex-shrink-0">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-indigo-500/40 bg-navy-800 shadow-lg shadow-indigo-500/10">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={PERSONAL.avatar}
+                        alt={PERSONAL.name}
+                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span
+                      className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-400 border-2 border-[#050816] rounded-full"
+                      title="Available for work"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-100">{PERSONAL.name}</h3>
+                    <p className="text-xs text-indigo-400 font-mono font-medium">{PERSONAL.title}</p>
+                    <p className="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                      <MapPin size={13} className="text-indigo-400 flex-shrink-0" />
+                      {PERSONAL.location}
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-sm">
-                  <MapPin size={16} className="text-indigo-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-300">{PERSONAL.location}</span>
-                </li>
                 <li className="flex items-start gap-3 text-sm">
                   <Briefcase size={16} className="text-indigo-400 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-300">

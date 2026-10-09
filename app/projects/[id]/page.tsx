@@ -124,6 +124,50 @@ export default async function ProjectDetailPage({ params }: Props) {
             </div>
           </section>
 
+          {/* Project Visuals & Screenshots */}
+          {"images" in project && project.images && (project.images as string[]).length > 0 && (
+            <section aria-labelledby="gallery-heading" className="mb-12">
+              <h2
+                id="gallery-heading"
+                className="text-xl font-bold text-slate-100 mb-5 flex items-center gap-2"
+              >
+                <Layers size={18} className="text-indigo-400" />
+                Project Screenshots & System Visuals
+              </h2>
+              <div
+                className={`grid gap-4 ${
+                  (project.images as string[]).length === 1
+                    ? "grid-cols-1"
+                    : (project.images as string[]).length === 2
+                    ? "grid-cols-1 md:grid-cols-2"
+                    : "grid-cols-1 md:grid-cols-3"
+                }`}
+              >
+                {(project.images as string[]).map((imgUrl: string, idx: number) => (
+                  <div
+                    key={idx}
+                    className="card-glass overflow-hidden group border border-white/[0.08] hover:border-indigo-500/40 transition-all duration-300"
+                  >
+                    <div className="relative aspect-video w-full overflow-hidden bg-[#080d20]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={imgUrl}
+                        alt={`${project.title} screenshot ${idx + 1}`}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                        <span className="text-xs text-indigo-200 font-medium">
+                          Visual {idx + 1} of {(project.images as string[]).length}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-10" />
 
           {/* Problem */}

@@ -74,7 +74,20 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
   const typeIcon = TYPE_ICONS[project.type] || <Briefcase size={12} />;
 
   return (
-    <article className="card-glass-hover p-6 flex flex-col group">
+    <article className="card-glass-hover p-6 flex flex-col group overflow-hidden">
+      {"coverImage" in project && project.coverImage && (
+        <div className="relative h-44 sm:h-48 w-full overflow-hidden rounded-xl mb-5 bg-[#080d20] border border-white/[0.06]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.coverImage}
+            alt={`${project.title} Preview`}
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/80 via-transparent to-transparent opacity-60" />
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-4">
         <div className="flex-1">
