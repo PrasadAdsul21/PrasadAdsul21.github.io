@@ -17,7 +17,7 @@ export const PERSONAL = {
     degree: "M.S. in Computer Science",
     institution: "Savitribai Phule Pune University",
   },
-  experience: "2+ years",
+  experience: "3+ years",
   availableForWork: true,
 };
 
