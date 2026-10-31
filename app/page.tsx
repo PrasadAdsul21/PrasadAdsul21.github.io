@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ApproachSection from "@/components/ApproachSection";
@@ -25,6 +26,10 @@ export default function HomePage() {
         <div className="divider-gradient" aria-hidden="true" />
 
         <AboutSection />
+
+        <div className="divider-gradient" aria-hidden="true" />
+
+        <ExperienceSection />
 
         <div className="divider-gradient" aria-hidden="true" />
 

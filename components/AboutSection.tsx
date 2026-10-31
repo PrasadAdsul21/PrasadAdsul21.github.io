@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, Briefcase, Code2, Lightbulb } from "lucide-react";
+import { GraduationCap, MapPin, Briefcase, Code2, Lightbulb, Award } from "lucide-react";
 import { PERSONAL } from "@/lib/data";
 
 export default function AboutSection() {
@@ -21,7 +21,7 @@ export default function AboutSection() {
               <p>
                 I&apos;m a Software Engineer based in{" "}
                 <span className="text-slate-200 font-medium">Pune, Maharashtra</span>{" "}
-                with over 2 years of professional experience building backend applications,
+                with {PERSONAL.experience} of experience building backend applications,
                 REST APIs, and enterprise web systems.
               </p>
               <p>
@@ -90,13 +90,26 @@ export default function AboutSection() {
                     {PERSONAL.experience} professional software engineering experience
                   </span>
                 </li>
-                <li className="flex items-start gap-3 text-sm">
-                  <GraduationCap size={16} className="text-indigo-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-300">
-                    {PERSONAL.education.degree},{" "}
-                    <span className="text-slate-400">{PERSONAL.education.institution}</span>
-                  </span>
-                </li>
+                {PERSONAL.education.map((education) => (
+                  <li key={education.degree} className="flex items-start gap-3 text-sm">
+                    <GraduationCap size={16} className="text-indigo-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">
+                      {education.degree},{" "}
+                      <span className="text-slate-400">{education.institution}</span>
+                      <span className="block text-xs text-slate-500 mt-1">{education.dates}</span>
+                    </span>
+                  </li>
+                ))}
+                {PERSONAL.certifications.map((certification) => (
+                  <li key={certification.name} className="flex items-start gap-3 text-sm">
+                    <Award size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">
+                      {certification.name},{" "}
+                      <span className="text-slate-400">{certification.issuer}</span>
+                      <span className="block text-xs text-slate-500 mt-1">{certification.date}</span>
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
 

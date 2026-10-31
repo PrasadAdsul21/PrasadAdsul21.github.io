@@ -6,7 +6,7 @@ import {
   Brain,
   Cloud,
 } from "lucide-react";
-import { SKILLS } from "@/lib/data";
+import { ADDITIONAL_SKILLS, SKILLS } from "@/lib/data";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Server: <Server size={20} />,
@@ -42,8 +42,8 @@ export default function SkillsSection() {
             <span className="gradient-text">Technologies</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            Technologies I work with professionally. Levels reflect actual usage rather than
-            self-scored proficiency percentages.
+            Core technologies I work with, plus additional skills listed on my CV. Levels reflect
+            actual usage rather than self-scored proficiency percentages.
           </p>
         </div>
 
@@ -91,6 +91,15 @@ export default function SkillsSection() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="card-glass p-6 mt-6">
+          <h3 className="text-sm font-semibold text-slate-200 mb-4">Additional Skills & Practices</h3>
+          <div className="flex flex-wrap gap-2">
+            {ADDITIONAL_SKILLS.map((skill) => (
+              <span key={skill} className="tech-tag">{skill}</span>
+            ))}
+          </div>
         </div>
 
         {/* Note */}

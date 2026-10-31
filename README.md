@@ -25,6 +25,7 @@ A modern, professional portfolio website built with **Next.js 15**, **TypeScript
 │   ├── Footer.tsx
 │   ├── HeroSection.tsx
 │   ├── AboutSection.tsx
+│   ├── ExperienceSection.tsx
 │   ├── ProjectsSection.tsx
 │   ├── SkillsSection.tsx
 │   ├── ApproachSection.tsx
@@ -106,8 +107,10 @@ npm run build        # Generates ./out directory
 
 All portfolio content lives in [`lib/data.ts`](./lib/data.ts). Update:
 - `PERSONAL` — name, email, social links
+- `EXPERIENCE` — professional experience and achievements
 - `PROJECTS` — project entries
 - `SKILLS` — technology groups
+- `ADDITIONAL_SKILLS` — other skills and practices listed on the CV
 - `ENGINEERING_PRINCIPLES` — approach section items
 
 ## 📧 Contact

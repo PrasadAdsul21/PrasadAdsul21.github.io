@@ -101,6 +101,11 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
             {project.title}
           </h3>
           <p className="text-xs text-slate-500 mt-1">{project.category}</p>
+          {"role" in project && (
+            <p className="text-xs text-slate-500 mt-1">
+              {project.role} · {project.dates}
+            </p>
+          )}
         </div>
         {/* Availability indicator */}
         {project.githubUrl && (

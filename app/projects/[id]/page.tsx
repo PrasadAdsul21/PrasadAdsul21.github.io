@@ -72,6 +72,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4 leading-tight">
               {project.title}
             </h1>
+            {"role" in project && (
+              <p className="text-sm text-slate-500 mb-4">
+                {project.role} · {project.dates}
+              </p>
+            )}
 
             <p className="text-xl text-slate-400 leading-relaxed mb-6">
               {project.shortDescription}

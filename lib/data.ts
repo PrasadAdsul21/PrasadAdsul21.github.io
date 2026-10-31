@@ -13,18 +13,88 @@ export const PERSONAL = {
   linkedin: "https://in.linkedin.com/in/prasadadsul217812",
   cv: "/Prasad_Adsul_DotNet-AI_Engineer_CV.pdf",
   avatar: "/profile.jpeg",
-  education: {
-    degree: "M.S. in Computer Science",
-    institution: "Savitribai Phule Pune University",
-  },
+  education: [
+    {
+      degree: "Master of Science in Computer Science",
+      institution: "Savitribai Phule Pune University",
+      dates: "June 2022 – May 2024",
+    },
+    {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "Savitribai Phule Pune University",
+      dates: "June 2019 – May 2022",
+    },
+  ],
+  certifications: [
+    { name: "LinkedIn DevOps Professional Certificate", issuer: "LinkedIn Learning", date: "July 2022" },
+    { name: "Google Data Analytics Professional", issuer: "Google", date: "January 2023" },
+  ],
   experience: "3+ years",
   availableForWork: true,
 };
+
+export const EXPERIENCE = [
+  {
+    role: "Software Engineer",
+    company: "Centralogic India Pvt Ltd",
+    location: "Pune, India",
+    dates: "January 2024 – July 2026",
+    highlights: [
+      "Developed backend services and REST APIs for enterprise applications using ASP.NET Core, C#, and .NET.",
+      "Optimized API performance, SQL operations, and backend logic, improving processing efficiency by 20%.",
+      "Applied Clean Architecture and contributed to Docker-based deployments and CI/CD workflows.",
+      "Integrated AI/LLM capabilities and automation workflows into enterprise applications.",
+    ],
+    technologies: ["ASP.NET Core", "C#", ".NET", "Entity Framework", "SQL", "Python", "AWS", "Docker"],
+  },
+  {
+    role: "Software Engineer Trainee",
+    company: "Centralogic India Pvt Ltd",
+    location: "Pune, India",
+    dates: "July 2023 – December 2023",
+    highlights: [
+      "Completed a 180-day training and internship program focused on software technologies.",
+      "Completed technical assessments covering C#, .NET, ASP.NET Core, REST APIs, Entity Framework, SQL Server, and Git.",
+    ],
+    technologies: ["C#", ".NET", "ASP.NET Core", "REST APIs", "Entity Framework", "SQL Server", "Git"],
+  },
+];
+
+export const ADDITIONAL_SKILLS = [
+  "WPF",
+  "MVVM",
+  ".NET MAUI",
+  "Node.js",
+  "Microservices",
+  "TensorFlow",
+  "Scikit-learn",
+  "Vector Databases",
+  "Prompt Engineering",
+  "AI Automation",
+  "JSON",
+  "XML",
+  "HTTP",
+  "Authentication",
+  "Secure SDLC",
+  "OWASP",
+  "Azure DevOps",
+  "Unit Testing",
+  "Integration Testing",
+  "NUnit",
+  "MSTest",
+  "Code Reviews",
+  "Debugging",
+  "KISS Principle",
+  "Performance Optimization",
+  "Agile Development",
+];
 
 export const PROJECTS = [
   {
     id: "o-medical-visa",
     title: "O Medical Visa",
+    role: "Full-Stack Developer",
+    dates: "September 2025 – July 2026",
     category: "Enterprise Healthcare Workflow",
     type: "Professional Project",
     provenance:
@@ -99,6 +169,8 @@ export const PROJECTS = [
   {
     id: "task-resource-management",
     title: "Task Tracking & Resource Management POC",
+    role: "AI/ML Engineer",
+    dates: "March 2025 – June 2025",
     category: "Knowledge Graph & AI Application",
     type: "Proof of Concept",
     provenance:
@@ -166,6 +238,8 @@ export const PROJECTS = [
   {
     id: "agent-support-bot",
     title: "Agent Support Bot",
+    role: "Backend & AI Engineer",
+    dates: "June 2025 – September 2025",
     category: "LLM-Powered Support Application",
     type: "AI Integration Project",
     provenance:
@@ -238,6 +312,8 @@ export const PROJECTS = [
   {
     id: "document-ocr-ai",
     title: "Document OCR-AI",
+    role: "Backend & AI Engineer",
+    dates: "January 2024 – March 2025",
     category: "Document Intelligence",
     type: "AI Integration Project",
     provenance:
